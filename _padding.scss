@@ -1,0 +1,15 @@
+
+@for $value from 1 through 10 {
+    .pt#{$value * 10} {
+        padding-top: 1rem * $value;
+    }
+    .pb#{$value * 10} {
+        padding-bottom: 1rem * $value;
+    }
+    .pl#{$value * 10} {
+        padding-left: 1rem * $value;
+    }
+    .pr#{$value * 10} {
+        padding-right: 1rem * $value;
+    }
+} 

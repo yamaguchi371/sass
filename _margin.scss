@@ -1,0 +1,21 @@
+/*--- 空白用マージン設定 ---*/
+
+$spaceClass:true;
+$endValue:10 !default;
+
+@if $spaceClass {
+    @for $i from 1 through $endValue {
+        .mt#{$i * 10} {
+            margin-top: 1rem * $i;
+        }
+        .mb#{$i * 10} {
+            margin-bottom: 1rem * $i;
+        }
+        .ml#{$i * 10} {
+            margin-left: 1rem * $i;
+        }
+        .mr#{$i * 10} {
+            margin-right: 1rem * $i;
+        }
+    }
+}

@@ -1,0 +1,8 @@
+$value: 200;
+
+@while $value > 0 {
+    .font#{$value} {
+        font-size: $value + px;
+    }
+    $value: $value - 25;
+}

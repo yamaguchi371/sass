@@ -1,0 +1,1336 @@
+@charset "utf-8";
+
+/*---------------------------------------------------------------------------------
+
+	Theme Name: zenshin
+	Description: Standtogether co., ltd
+	Author: Standtogether co., ltd
+	
+-----------------------------------------------------------------------------------
+
+	0.	CSS Reset & Clearfix
+	1.	Document
+	2.	Font
+	3.	Frame
+	4.	Heading
+	5.	Header
+	6.	Menu Navigation
+	7.	Button
+	8.	Top Page
+	9.	Sub Top Page
+	10.	Single Page
+	11.	Blog
+	12.	Sidebar
+	13.	Footer
+	14. Color
+	15. Button
+	16. Margin/Padding
+	17. Google Map
+	18.	Contact Form 7
+	19.	Woo Commerce
+	20. Search
+	99.	Media Print
+
+----------------------------------------------------------------------------------- */
+@font-face {
+	font-family: 'futura-lt';
+	src: url('fonts/futura-lt-oblique.ttf');
+}
+
+/* -------------------------------------------------------------------------------- */
+/*	0. CSS Reset
+/* -------------------------------------------------------------------------------- */
+
+
+html, body {
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, p, blockquote, address, big, cite, code, em, font, img, small, strike, sub, sup, li, ol, ul, fieldset, form, label, legend, button, table, caption, tr, th, td {
+	margin:0;
+	padding:0;
+	border:0;
+	font-weight:normal;
+	font-style:normal;
+	font-size:100%;
+	line-height:1.5;
+	font-family:inherit;
+	text-align:left;
+}
+
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+
+ol, ul {
+	list-style:none;
+}
+
+li {
+    list-style: none;
+}
+
+blockquote:before, blockquote:after {
+	content:"";
+}
+
+a { outline:none; }
+
+input[type=search],
+input[type=text],
+input[type=email],
+input[type=url],
+input[type=button],
+input[type=tel],
+input[type=submit],
+textarea {
+   -moz-appearance: none;
+   -webkit-appearance: none;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+
+img { border: none; vertical-align: bottom; }
+
+caption, th { text-align:left; }
+
+iframe { border: none;}
+
+a:focus { outline: none;}
+
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;} 
+
+li img{
+	line-height:0;
+	font-size:0;
+	vertical-align:top;
+}
+
+.clear {
+    clear: both;
+}
+
+/* IE */
+* html ul li dl,
+* html ol li dl { display: inline; }
+
+*:first-child+html ul li dl,
+*:first-child+html ol li dl {display: inline; }
+
+/* =========================================================
+ * html5        /*html5
+========================================================= */
+article,aside,canvas,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section,summary{
+display:block;
+}
+
+/* =========================================================
+ * clearfix   /*clearfix
+========================================================= */
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    height: 0;
+    visibility: hidden;
+}
+.clearfix {display: inline-block;}
+/*\*/
+* html .clearfix {height: 1%}
+.clearfix {display:block;}
+/**/
+
+/* IE */
+* html div.clearfix {height: 1%;}
+*:first-child+html div.clearfix {height: 1%;}
+
+.clear { clear: both; }
+
+
+/* -------------------------------------------------------------------------------- */
+/*	1. Document
+/* -------------------------------------------------------------------------------- */
+
+html {
+	-webkit-overflow-scrolling: touch;
+}
+
+body {
+	background: #fff;
+	color: #000;
+	font-family: "ヒラギノ丸ゴ ProN W4","Hiragino Maru Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif !important;
+	font-size: 120%;
+	-webkit-font-smoothing: antialiased;
+	line-height: 1;
+	word-wrap: break-word;
+	overflow-x: hidden;
+}
+
+a {
+	text-decoration: none !important;
+	color: #666;
+}
+
+a:hover {
+	text-decoration: none !important;
+	color: #999;
+}
+
+a:focus {
+	outline: none;
+}
+
+/* li a {
+	display: block;
+} */
+* {  
+	-webkit-box-sizing: border-box; 
+	-moz-box-sizing: border-box; 
+	box-sizing: border-box;
+}
+
+img {
+	border-radius: 5px;
+	max-width: 100%;
+	height: auto;
+}
+.noRadius {
+	border-radius: 0 !important;
+}
+
+::selection {
+	background: #333;
+	color: #fff;
+}
+
+::-webkit-input-placeholder { color: #fff; }
+:-ms-input-placeholder { color: #fff; }
+
+.fp {
+    float: left;
+}
+
+
+/* -------------------------------------------------------------------------------- */
+/*	2.	Font
+/* -------------------------------------------------------------------------------- */
+
+.bold {
+	font-weight: bold
+}
+.font50 {
+	font-size: 50%;
+}
+.font65 {
+	font-size: 65%;
+}
+.font85 {
+	font-size: 85%;
+}
+.font100 {
+	font-size: 100%;
+}
+.font125 {
+	font-size: 125%;
+}
+.font150 {
+	font-size: 150%;
+}
+.font175 {
+	font-size: 175%;
+}
+.font200 {
+	font-size: 200%;
+}
+.font300 {
+	font-size: 300%;
+}
+.font400 {
+	font-size: 400%;
+}
+.font500 {
+	font-size: 500%;
+}
+.em-09 {
+	font-size: 0.9em;
+}
+.em-2 {
+	font-size: 2em;
+}
+.fa-facebook-square {
+	font-size: 32px;
+}
+.fa-pencil-alt {
+	font-size: 32px;
+}
+
+/* -------------------------------------------------------------------------------- */
+/*	3.	Frame
+/* -------------------------------------------------------------------------------- */
+
+.center {
+	text-align: center;
+}
+.left {
+	text-align: left;
+}
+.right {
+	text-align: right;
+}
+.futuraIt {
+	font-family: "Futura-lt" !important;
+}
+.hidden { 
+	display: none;
+}
+.clear {
+	clear: both;
+}
+.fleft {
+	float: left;
+}
+.topScript {
+	display: none;
+}
+.fright {
+	float: right;
+}
+.center {
+	text-align: center;
+}
+.container {
+	width: 1200px;
+	margin: 0 auto;
+	background: #fff;
+}
+.lheight15 {
+	line-height: 1.5;
+}
+.lheight30 {
+	line-height: 3.0;
+}
+.flexBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.alignItems {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.topEnterBox {
+	background-color: #fff;
+	border-radius: 5px;
+	padding: 25px;
+	-webkit-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.45);
+	-moz-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.45);
+	box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.45);
+}
+.width235 {
+	width: 23.5%;
+}
+
+.width50 {
+	width: 50%;
+}
+
+/* -------------------------------------------------------------------------------- */
+/*	4.	Heading
+/* -------------------------------------------------------------------------------- */
+
+h2 {
+	border-bottom: 1px solid #ccc;
+	padding: 20px 0;
+}
+.h2NoBorder {
+	border: none !important;
+}
+.h3Border {
+	border-bottom: 1px solid #00abeb;
+}
+
+/* -------------------------------------------------------------------------------- */
+/*	5.	Header
+/* -------------------------------------------------------------------------------- */
+
+.modal-body {
+	padding: 20px 0 !important;
+	text-align: center !important;
+}
+
+/* -------------------------------------------------------------------------------- */
+/*	6.	Menu Navigation
+/* -------------------------------------------------------------------------------- */
+
+.navbar-default {
+/*    margin-top: 3rem; 提出時にコメントアウトする*/
+	background-color: #fff !important;
+	border-color: #fff !important;
+	border-radius: 0 !important;
+	z-index: 1049 !important;
+}
+.navbar {
+	background-color: #fff;
+	margin-bottom: 0 !important;
+	z-index: 1049;
+}
+.header-logo {
+  background: url("images/logo.png") no-repeat left center;
+  background-size: contain;
+  width: 200px;
+}
+.header-zenshinTop-logo {
+  background: url("images/zenshinLogo.jpg") no-repeat left center;
+  background-size: contain;
+  width: 95px;
+}
+.header-workTop-logo {
+  background: url("images/workLogo.jpg") no-repeat left center;
+  background-size: contain;
+  width: 200px;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+	background-color: #fff;
+}
+.navbar-default .navbar-toggle {
+	border-color: #fff;
+}
+div#bs-example-navbar-collapse-1 {
+	clear: both;
+}
+.navbar-toggle .icon-bar {
+	width: 31px;
+	height: 3px;
+}
+.navbar-brand {
+	height: 65px !important;
+}
+.navbar-borderB {
+	border-bottom: 5px solid #00abeb;
+	margin-right: -500px !important;
+	padding-right: 500px !important;
+}
+
+/* -------------------------------------------------------------------------------- */
+/*	7.	Button
+/* -------------------------------------------------------------------------------- */
+
+
+/* -------------------------------------------------------------------------------- */
+/*	8.	Top Page
+/* -------------------------------------------------------------------------------- */
+
+.page-template-front-page {
+	background-image: url(images/background.png);
+}
+.welfareBox {
+	position: relative;
+}
+.welfareTitle {
+	display: inline;
+	font-size: 2vw;
+	padding: 20px;
+	vertical-align: top;
+}
+.welfareTop {
+	position: absolute;
+	top: 50px;
+	left: 30%;
+}
+.welfareContent {
+	background-color: #fff;
+	border: 3px solid #00abeb;
+	position: absolute;
+	top: 50px;
+	width: 60%;
+}
+.rozanp {
+    line-height: 2.5rem;
+    position: absolute;
+    bottom: 36px;
+}
+.rozana {
+    color: #00abeb;
+}
+.rozana:hover {
+    text-decoration: underline;
+}
+.welfareLogo {
+	width: 50%;
+}
+.welfareMenu {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+.welfareMenu li a {
+	border: 1px solid #00abeb;
+	color: #00abeb;
+	display: block;
+	margin: 0 -1px 40px;
+	padding: 20px 100px;
+	text-align: center;
+}
+.welfareMenu .modal-pamphlet {
+	border: 1px solid #00abeb;
+	color: #00abeb;
+	display: block;
+	margin: 0 -1px 40px;
+	padding: 20px 100px;
+	text-align: center;
+}
+.welfareMenu li a:hover {
+	background-color: #00abeb;
+	border: 1px solid #00abeb;
+	color: #fff;
+}
+.welfareMenu .modal-pamphlet:hover {
+	background-color: #00abeb;
+	border: 1px solid #00abeb;
+	color: #fff;
+}
+.enterpriseBox {
+	position: relative;
+	top: 1300px;
+}
+.enterpriseTitle {
+	display: inline;
+	font-size: 2vw;
+	padding: 20px;
+	vertical-align: top;
+}
+.enterpriseTop {
+	position: absolute;
+	top: 50px;
+	left: 30%;
+}
+.enterpriseContent {
+	background-color: #fff;
+	border: 3px solid #f39800;
+	position: absolute;
+	top: 50px;
+	width: 60%;
+}
+.enterpriseMenu {
+	float: right;
+}
+.enterpriseMenu li a {
+	background-color: #f39800;
+	border: 1px solid #f39800;
+	color: #fff;
+	display: block;
+	margin: 0 -1px 40px;
+	padding: 20px 100px;
+	text-align: center;
+}
+.enterpriseMenu li a:hover {
+	background-color: #fff;
+	border: 1px solid #f39800;
+	color: #f39800;
+}
+.aboutUsBox {
+	position: relative;
+	top: 2300px;
+	display: none;
+}
+.aboutUsComment {
+	background-color: rgba(255,255,255,0.8);
+	margin: 0 auto;
+	width: 35%;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+
+/* -------------------------------------------------------------------------------- */
+/*	9.	Sub Top Page
+/* -------------------------------------------------------------------------------- */
+
+.zenshinHeaderPhone {
+    font-size:2rem;
+}
+
+.zenshinMenu {
+    float: right;
+}
+
+.zenshinCircleBg {
+	position: relative;
+	right: 0%;
+	width: 200%;
+}
+.zenshinCircle {
+	background-color: #00abeb;
+	border-radius: 50%;
+	padding: 50%;
+}
+.workCircle {
+	background-color: #f39800;
+	border-radius: 50%;
+	padding: 50%;
+}
+.zenshinTopSubLogo {
+	position: absolute;
+	top: 40%;
+	left: 0%;
+	-webkit-transform: translate(10%,-50%);
+	-moz-transform: translate(10%,-50%);
+	-ms-transform: translate(10%,-50%);
+	-o-transform: translate(10%,-50%);
+	transform: translate(10%,-50%);
+	z-index: 9999;
+}
+.zenshinTopSubMenuTable {
+	border-left: 5px solid #afe9ff;
+}
+.workTopSubMenuTable {
+	border-left: 5px solid #f7c767;
+}
+
+/* -------------------------------------------------------------------------------- */
+/*	10.	Single Page
+/* -------------------------------------------------------------------------------- */
+
+.bdInformation {
+	border: 1px solid #00abeb;
+	margin: 50px auto;
+	padding: 50px 0 100px;
+	width: 50%;
+}
+.bdOrangeInformation {
+	border: 1px solid #f39800;
+	margin: 50px auto;
+	padding: 50px 0 100px;
+	width: 50%;
+}
+
+/* -------------------------------------------------------------------------------- */
+/*	11.	Blog
+/* -------------------------------------------------------------------------------- */
+
+.old, .new {
+    display: inline-block;
+    margin-top: 1.2rem;
+}
+
+.blogmenu {
+	width: 20%;
+	float: left;
+}
+.contents {
+	width: 80%;
+	float: left;
+}
+.moreBlog {
+	margin: 20px 0 30px 0;
+	text-align: right;
+}
+.moreBlog a {
+	border: 2px solid #00abeb;
+    border-radius: 4px;
+	padding: 10px 8px;
+	text-align: right;
+}
+.blogTitle {
+	-webkit-writing-mode: vertical-rl;
+	-ms-writing-mode: tb-rl;
+	writing-mode: vertical-rl;
+	margin: 0 auto;
+}
+
+
+/* -------------------------------------------------------------------------------- */
+/*	12.	Sidebar
+/* -------------------------------------------------------------------------------- */
+
+/* ハンバーガーメニュー部分*/
+.toggle-name {
+    color: #939393;
+    position: relative;
+    top:38px;
+    left: 5px;
+}
+.toggle-name:hover {
+    color: #939393;
+}
+
+
+.sidebar {
+    margin-top: 50px;
+}
+
+.sidebar li {
+    list-style: none;
+}
+
+.archive-title {
+    margin-bottom: 5px;
+    padding-left: 5px;
+    color: #00abeb;
+    border-left: solid 8px #00abeb;
+    font-size:2rem;
+    font-weight: bold;
+}
+
+/*カスタムアーカイブ*/
+
+ul.accordion {
+    width:80%;
+    font-size:12px;
+    margin-bottom: 20px;
+}
+ul.accordion a { 
+    display:block; 
+    padding:5px; 
+    background-position:97% center; 
+    background-repeat:no-repeat; 
+    text-decoration:none; 
+    color:#fff; 
+    border: solid 1px #00abeb;
+}
+ul.accordion a:hover {
+   background:#00abeb; 
+    color:#FFF; 
+}
+ul.accordion .archives { 
+    display:block; 
+    padding:5px; 
+    background-color: #fff;
+    background-position:97% center; 
+    background-repeat:no-repeat; 
+    background-color:#00abeb;
+    color:#fff; 
+    font-weight:bold;
+    border-top: solid 2px #fff;
+    border-bottom: solid 2px #fff;
+    border-radius: 4px;
+}
+ul.accordion .archives:hover { 
+    background:#fff;
+    color:#00abeb;
+    cursor: pointer; 
+}
+ul.accordion ul { 
+    display:none;
+}
+ul.accordion > li > p span { 
+    background:#FFF;
+}
+ul.accordion > li > p span.open { 
+    background:#00abeb;
+}
+ul.accordion > li > p span.open:hover { 
+    background:#00abeb;
+    color:#FFF
+}
+ul.accordion > li > ul > li { 
+    background:#FFF;
+    margin-left: 10%;
+    margin-bottom: 2px;
+}
+ul.accordion > li > ul > li:first-child {
+    margin-top: 2px;
+}
+ul.accordion > li > ul > li > p { 
+    background:#FFF;
+}
+ul.accordion > li > ul > li > a { 
+    background:#FFF;
+    color: #00abeb;
+    font-weight: bold;
+    border-radius: 4px;
+}
+ul.accordion > li > ul > li > ul > li { 
+    background:#FFF; 
+}
+ul.accordion > li > ul > li > ul > li:last-child {
+    border:none;
+}
+.sidebar h2 {
+    margin-top: 10px;
+    padding: 5px 0;
+    width: 60%;
+}
+.sidebar > li > ul > li:first-child {
+    margin-top: 10px;
+}
+
+
+/* -------------------------------------------------------------------------------- */
+/*	13.	Footer
+/* -------------------------------------------------------------------------------- */
+
+footer p {
+    padding-left: 50px;
+}
+
+footer li {
+    list-style: none;
+    padding-left: 50px;
+}
+
+.footer-menu {
+    margin: 20px 0;
+}
+
+.front-footer {
+    padding-left: 100px;
+}
+
+.copyright {
+	border-top: 1px solid #00abeb;
+	border-bottom: 1px solid #00abeb;
+}
+.bgZenshinCyan a:hover {
+	text-decoration: none;
+}
+.copyrightWork {
+	border-top: 1px solid #f39800;
+	border-bottom: 1px solid #f39800;
+}
+.bgWorkOrange a:hover {
+	text-decoration: none;
+}
+.imgShadow {
+	box-shadow:0px 0px 3px 2px #ccc;
+}
+.footerTop {
+	position: relative;
+	top: 2100px;
+}
+
+/* -------------------------------------------------------------------------------- */
+/*	14.	Color
+/* -------------------------------------------------------------------------------- */
+
+.white,
+.white a {
+	color: #fff;
+}
+.white a:hover {
+	background-color: #fff;
+    opacity: 0.8;
+}
+.black {
+	color: #000;
+}
+.zenshinCyan,
+.zenshinCyan a {
+	color: #00abeb;
+}
+.zenshinCyan a:hover {
+	color: #fff;
+	background-color: #00abeb;
+	/* display: block; */
+}
+.zenshinLightCyan {
+	color: #afe9ff;
+}
+.bgZenshinCyan,
+.bgZenshinCyan a {
+	background-color: #00abeb !important;
+	color: #fff;
+}
+.workOrange,
+.workOrange a {
+	color: #f39800;
+}
+.workOrange a:hover {
+	color: #fff;
+	background-color: #f39800;
+	/* display: block; */
+}
+.workLightOrange {
+	color: #f7c767;
+}
+.bgWorkOrange,
+.bgWorkOrange a {
+	background-color: #f39800 !important;
+	color: #fff;
+}
+.pdf,
+.pdf a {
+	color: #BB0706;
+}
+.bgFooter {
+	background-color: #e6e6e6;
+}
+
+/* -------------------------------------------------------------------------------- */
+/*	15.	Button
+/* -------------------------------------------------------------------------------- */
+
+
+/* -------------------------------------------------------------------------------- */
+/*	16.	Margin/Padding
+/* -------------------------------------------------------------------------------- */
+
+.mgB20 {
+	margin-bottom: 20px;
+}
+.mgB50 {
+	margin-bottom: 50px;
+}
+.mgB200 {
+	margin-bottom: 200px;
+}
+.mg200 {
+	margin: 20px 0;
+}
+.pd0 {
+	padding: 0 !important;
+}
+.pd100 {
+    padding: 10px;
+}
+.pd105 {
+	padding: 10px 5px;
+}
+.pd20 {
+	padding: 20px;
+}
+.pd25 {
+	padding: 25px;
+}
+.pd50 {
+	padding: 50px;
+}
+.pd60 {
+	padding: 60px;
+}
+.pd80 {
+	padding: 80px;
+}
+.pd200 {
+	padding: 20px 0;
+}
+.pd300 {
+	padding: 30px 0;
+}
+.pd700 {
+	padding: 70px 0 !important;
+}
+.pd7000 {
+	padding: 70px 0 0 !important;
+}
+.pd80800 {
+	padding: 80px 80px 0 !important;
+}
+.pd8080250 {
+	padding: 80px 80px 250px !important;
+}
+.pd010 {
+	padding: 0 10px;
+}
+.pd060 {
+	padding: 0 60px;
+}
+.pd080 {
+	padding: 0 80px;
+}
+.pd08080 {
+	padding: 0 80px 80px;
+}
+.pd70020 {
+	padding: 70px 0 20px;
+}
+.pdTop50 {
+	padding-top: 50px;
+}
+.pdTop70 {
+	padding-top: 70px;
+}
+.pdBottom50 {
+	padding-bottom: 50px;
+}
+.pdR10 {
+	padding-right: 10px;
+}
+.pdR15 {
+	padding-right: 15px;
+}
+.pdTopSubMenuTitle {
+	padding: 50px 0 10px;
+}
+.pdZenshinTopSubMenu {
+	padding: 30px 0 0 30px;
+}
+.pdWorkTopSubMenu {
+	padding: 30px 0 0 30px;
+}
+
+/* -------------------------------------------------------------------------------- */
+/*	17.	Google Map
+/* -------------------------------------------------------------------------------- */
+
+.ggmap {
+position: relative;
+padding-bottom: 56.25%;
+padding-top: 30px;
+height: 0;
+overflow: hidden;
+}
+ 
+.ggmap iframe,
+.ggmap object,
+.ggmap embed {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+}
+
+/* -------------------------------------------------------------------------------- */
+/*	18.	Contact Form 7
+/* -------------------------------------------------------------------------------- */  
+
+div.wpcf7 { padding:0px; -moz-border-radius:10px; -khtml-border-radius:10px; -webkit-border-radius:10px; border-radius:10px; margin:0 0 30px 0; }
+div.wpcf7 p {
+	padding:20px 20px 0;
+	margin:0;
+	font-size:20px;
+	line-height: 1.8;
+}
+div.wpcf7 input {
+	width: 100%;
+}
+div.wpcf7 input, .wpcf7 textarea { border:1px solid; padding:8px; font-size:14px; }
+div.wpcf7 textarea { width:100%; height:300px; }
+div.wpcf7 input.wpcf7-submit {
+   cursor:pointer; color:#fff; font-weight:bold; font-size:14px; width:200px; height:45px; margin:0 auto; display:block;
+   -moz-border-radius:5px; -khtml-border-radius:5px; -webkit-border-radius:5px; border-radius:5px;
+   background:#8B0202;}
+div.wpcf7 input.wpcf7-submit:hover { background:#8B0202;}
+.wpcf7 input.wpcf7-submit:active { box-shadow:none; bottom:-2px; position:relative; }
+
+div.wpcf7 .bcZenshinCyan input,
+div.wpcf7 .bcZenshinCyan textarea,
+div.wpcf7 .bcZenshinCyan checkbox {
+	border: 1px solid #00abeb;
+	border-radius: 5px;
+}
+div.wpcf7 .bcWorkOrange input,
+div.wpcf7 .bcWorkOrange textarea,
+div.wpcf7 .WorkOrange checkbox {
+	border: 1px solid #f39800;
+	border-radius: 5px;
+}
+
+/* エラー個所をわかりやすく表示 */
+.wpcf7 .wpcf7-not-valid { background: #ffb6c1; }
+.wpcf7 span.wpcf7-not-valid-tip {font-size: 80%;}
+.wpcf7 .wpcf7-response-output {margin: 10px 0 0; padding: 8px 35px 8px 14px; text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; }
+.wpcf7 .wpcf7-validation-errors {color: #B94A48; background-color: #F2DEDE; border: 1px solid #EED3D7;}
+.wpcf7 .wpcf7-mail-sent-ok {color: #3A87AD; background-color: #D9EDF7; border: 1px solid #BCE8F1;}
+
+
+/* -------------------------------------------------------------------------------- */
+/*	19.	Woo Commerce
+/* -------------------------------------------------------------------------------- */  
+
+.wcmenubar {
+	font-size: 0;
+}
+
+li.wcmenu {
+  background-color: #fff1d9;
+  color: #f39800;
+  display: inline-block;
+  vertical-align: middle;
+  width: calc(100% / 4);
+}
+ 
+li.wcmenu > a {
+  color: #f39800;
+  text-align: center;
+  display: table;
+  width: 100%;
+  padding: 10px;
+}
+
+li.wcmenu > a:hover {
+  background-color: #f39800;
+  color: #fff;
+}
+ 
+li.wcmenu > a span {
+  display: table-cell;
+  font-size: 20px;
+  vertical-align: middle;
+}
+
+/* -------------------------------------------------------------------------------- */
+/*	20.	Search
+/* -------------------------------------------------------------------------------- */  
+
+#searchform {
+    position: relative;
+    margin-bottom: 50px;
+    width: 200px;
+    height: 50px;
+}
+.sbox {
+    margin: 30px 0 30px 0;
+    height: 50px;
+    padding: 0 10px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 4px;
+    border: solid 3px #00abeb;
+    background: #cecece;
+}
+.sbox::placeholder {
+    font-size: 1.5rem;
+}
+.sbtn {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    left:160px;
+    top: 30px;
+    outline: 0;
+    background: none;
+    font-size:20px;
+    color: #00abeb;
+}
+.sbtn:hover {
+    color: #fff;
+}
+
+.stitle {
+    font-size: 3rem;
+    font-weight: bold;
+
+}
+.btitle a {
+    font-size:2rem;
+    font-weight: bold;
+    padding: 5px;
+    color: #00abeb;
+}
+.btitle a:hover {
+    background:#00abeb;
+    color: #fff;
+}
+
+/* -------------------------------------------------------------------------------- */
+/*	99.	Media print
+/* -------------------------------------------------------------------------------- */  
+
+@media print {
+	a[href]:after {
+		content: none;
+	}
+	abbr[title]:after {
+		content: none;
+	}
+	.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+		float: left;
+	}
+	.col-sm-12 {
+		width: 100%;
+	}
+	.col-sm-11 {
+		width: 91.66666667%;
+	}
+	.col-sm-10 {
+		width: 83.33333333%;
+	}
+	.col-sm-9 {
+		width: 75%;
+	}
+	.col-sm-8 {
+		width: 66.66666667%;
+	}
+	.col-sm-7 {
+		width: 58.33333333%;
+	}
+	.col-sm-6 {
+		width: 50%;
+	}
+	.col-sm-5 {
+		width: 41.66666667%;
+	}
+	.col-sm-4 {
+		width: 33.33333333%;
+	}
+	.col-sm-3 {
+		width: 25%;
+	}
+	.col-sm-2 {
+		width: 16.66666667%;
+	}
+	.col-sm-1 {
+		width: 8.33333333%;
+	}
+	.col-sm-pull-12 {
+		right: 100%;
+	}
+	.col-sm-pull-11 {
+		right: 91.66666667%;
+	}
+	.col-sm-pull-10 {
+		right: 83.33333333%;
+	}
+	.col-sm-pull-9 {
+		right: 75%;
+	}
+	.col-sm-pull-8 {
+		right: 66.66666667%;
+	}
+	.col-sm-pull-7 {
+		right: 58.33333333%;
+	}
+	.col-sm-pull-6 {
+		right: 50%;
+	}
+	.col-sm-pull-5 {
+		right: 41.66666667%;
+	}
+	.col-sm-pull-4 {
+		right: 33.33333333%;
+	}
+	.col-sm-pull-3 {
+		right: 25%;
+	}
+	.col-sm-pull-2 {
+		right: 16.66666667%;
+	}
+	.col-sm-pull-1 {
+		right: 8.33333333%;
+	}
+	.col-sm-pull-0 {
+		right: auto;
+	}
+	.col-sm-push-12 {
+		left: 100%;
+	}
+	.col-sm-push-11 {
+		left: 91.66666667%;
+	}
+	.col-sm-push-10 {
+		left: 83.33333333%;
+	}
+	.col-sm-push-9 {
+		left: 75%;
+	}
+	.col-sm-push-8 {
+		left: 66.66666667%;
+	}
+	.col-sm-push-7 {
+		left: 58.33333333%;
+	}
+	.col-sm-push-6 {
+		left: 50%;
+	}
+	.col-sm-push-5 {
+		left: 41.66666667%;
+	}
+	.col-sm-push-4 {
+		left: 33.33333333%;
+	}
+	.col-sm-push-3 {
+		left: 25%;
+	}
+	.col-sm-push-2 {
+		left: 16.66666667%;
+	}
+	.col-sm-push-1 {
+		left: 8.33333333%;
+	}
+	.col-sm-push-0 {
+		left: auto;
+	}
+	.col-sm-offset-12 {
+		margin-left: 100%;
+	}
+	.col-sm-offset-11 {
+		margin-left: 91.66666667%;
+	}
+	.col-sm-offset-10 {
+		margin-left: 83.33333333%;
+	}
+	.col-sm-offset-9 {
+		margin-left: 75%;
+	}
+	.col-sm-offset-8 {
+		margin-left: 66.66666667%;
+	}
+	.col-sm-offset-7 {
+		margin-left: 58.33333333%;
+	}
+	.col-sm-offset-6 {
+		margin-left: 50%;
+	}
+	.col-sm-offset-5 {
+		margin-left: 41.66666667%;
+	}
+	.col-sm-offset-4 {
+		margin-left: 33.33333333%;
+	}
+	.col-sm-offset-3 {
+		margin-left: 25%;
+	}
+	.col-sm-offset-2 {
+		margin-left: 16.66666667%;
+	}
+	.col-sm-offset-1 {
+		margin-left: 8.33333333%;
+	}
+	.col-sm-offset-0 {
+		margin-left: 0%;
+	}
+	.visible-xs {
+		display: none !important;
+	}
+	.hidden-xs {
+		display: block !important;
+	}
+	table.hidden-xs {
+		display: table;
+	}
+	tr.hidden-xs {
+		display: table-row !important;
+	}
+	th.hidden-xs,
+	td.hidden-xs {
+		display: table-cell !important;
+	}
+	.hidden-xs.hidden-print {
+		display: none !important;
+	}
+	.hidden-sm {
+		display: none !important;
+	}
+	.visible-sm {
+		display: block !important;
+	}
+	table.visible-sm {
+		display: table;
+	}
+	tr.visible-sm {
+		display: table-row !important;
+	}
+	th.visible-sm,
+	td.visible-sm {
+		display: table-cell !important;
+	}
+}

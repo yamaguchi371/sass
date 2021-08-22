@@ -1,0 +1,87 @@
+@charset "UTF-8";
+// css reset
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+p, li, ol, ul, form, button, table, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.5;
+    font-family: inherit;
+}
+
+@for $value from 1 through 6 {
+    h#{$value} {
+        @extend p;
+    }
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+ol, ul, li {
+    list-style: none;
+}
+blockquote {
+    &::before,
+    &::after {
+        content: '';
+    } 
+}
+a {
+    outline: none;
+    text-decoration: none;
+    &:hover {
+        outline: none;
+        text-decoration: none;
+    }
+}
+
+input[type=search],
+input[type=text],
+input[type=email],
+input[type=url],
+input[type=button],
+input[type=tel],
+input[type=submit],
+textarea {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+}
+
+.clear {
+    clear: both;
+}
+/* 1.Documents */
+
+
+
+body {
+    font-size: 16px;
+    box-sizing: border-box;
+    font-family: メイリオ, Meiryo, 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif";
+}
+/*font-size*/
+@import "font.scss";
+
+/*space*/
+@import "margin.scss", "padding.scss";
+
+

@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+//サイトの基本設定
+
+//幅関係の設定
+    $width-base: 1200px; //全体
+    $width-main: 800px;　//メインエリアの幅
+    $width-side: 360px;  //サイドバーの幅
+
+//フォント関係の設定
+    $font-base: "Yu Gothic", Sans-Serif;
+    $font-serif: "Yu Mincho", serif;
+
+//　色関係の設定
+    //サイトカラー
+    $color-main: #0062b2;
+    $color-sub: #def1fa;
+    //フォントカラー
+    $color-font: #333;
+    //リンクカラー
+    $color-link: #ff8c28;
+// ブレイクポイント
+    $breakpoints: (
+        sp: "screen and (max-width:599px)",
+        pc: "screen and (min-width:600px)",
+    );

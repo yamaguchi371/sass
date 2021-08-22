@@ -1,0 +1,42 @@
+/*
+Error: Invalid CSS after "...dth-side: 360px": expected "{", was ";  //サイドバーの幅"
+        on line 8 of C:\Users\OWNER\Desktop\sass-css\main\setting.scss
+
+3: //サイトの基本設定
+4: 
+5: //幅関係の設定
+6:     $width-base: 1200px; //全体
+7:     $width-main: 800px;　//メインエリアの幅
+8:     $width-side: 360px;  //サイドバーの幅
+9: 
+10: //フォント関係の設定
+11:     $font-base: "Yu Gothic", Sans-Serif;
+12:     $font-serif: "Yu Mincho", serif;
+13: 
+
+Backtrace:
+C:\Users\OWNER\Desktop\sass-css\main\setting.scss:8
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1278:in `expected'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1208:in `expected'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1203:in `tok!'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:677:in `block'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:670:in `ruleset'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:696:in `block_child'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:689:in `block_contents'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:137:in `stylesheet'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:41:in `parse'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:414:in `_to_tree'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:307:in `render_with_sourcemap'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:391:in `run'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:63:in `process_result'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:52:in `parse'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:19:in `parse!'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/bin/sass:13:in `<top (required)>'
+C:/Program Files (x86)/Koala/bin/sass:22:in `load'
+C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"...dth-side: 360px\": expected \"{\", was \";  //サイドバーの幅\"\A         on line 8 of C:\Users\OWNER\Desktop\sass-css\main\setting.scss\A \A 3: //サイトの基本設定\A 4: \A 5: //幅関係の設定\A 6:     $width-base: 1200px; //全体\A 7:     $width-main: 800px;　//メインエリアの幅\A 8:     $width-side: 360px;  //サイドバーの幅\A 9: \A 10: //フォント関係の設定\A 11:     $font-base: \"Yu Gothic\", Sans-Serif;\A 12:     $font-serif: \"Yu Mincho\", serif;\A 13: "; }
